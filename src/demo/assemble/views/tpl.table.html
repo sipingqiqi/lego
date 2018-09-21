@@ -1,0 +1,19 @@
+<p-main bgcolor='offwhite'>
+    <stub></stub>
+    <a-table bgcolor='white'>
+        <text-row label='姓名' align='right' color='grey'>李乐乐</text-row>
+        <text-row label='公司名称'>拉拉养老保险股份有限公司拉拉养老保险股份有限公司拉拉养老保险股份有限公司</text-row>
+        <select-row label='左侧单行'>请选择内容</select-row>
+        <select-row label='左侧单行' :native='true' placeholder='每个发工资日' :data-select='["1日","2日","3日","4日"]'></select-row>
+        <select-row label='支持左侧多行文字' color='coral'>请选择</select-row>
+    </a-table>
+    <stub></stub>
+    <a-table bgcolor='white'>
+        <text-row label='姓名'>李乐乐</text-row>
+        <text-field-row label='姓名' placeholder='请输入姓名' required='true'></text-field-row>
+        <text-field-row label='姓名' placeholder='请输入姓名' value='默认值' required='true'></text-field-row>
+        <tel-field-row label='手机号码' placeholder='请输入手机号码' required='true'></tel-field-row>
+        <id-field-row label='身份证号' :label-width='8' placeholder='请输入身份证号' required='true'></id-field-row>
+        <otp-field-row label='验证码' placeholder='短信验证码' required='true'></otp-field-row>
+    </a-table>
+</p-main>

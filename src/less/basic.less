@@ -1,0 +1,429 @@
+@import 'rem.less';
+
+// 文本类型控件的样式
+._text {
+  font-weight: normal;
+  color: @c-grey;
+  font-size: @text-size-24px;
+}
+._highlight {
+  font-weight: normal;
+  color: @c-high;
+  font-size: @text-size-24px;
+}
+._skeleton {
+  display: inline-block;
+  padding: 4px;
+  color: #fff;
+  border-radius: 4px;
+  background-color: @c-high;
+  font-size: @text-size-24px;
+}
+
+// 图片与图标类型控件的样式
+._icon {
+  color: @c-grey;
+}
+._image {
+  display: block;
+  border: none;
+}
+
+// 按钮类型控件的样式
+button {
+  display: block;
+  width: 100%;
+  padding: 0;
+}
+// <b-button/>
+._button {
+  background-color: @c-white;
+  color: @c-high;
+  border: 1px solid @c-high;
+  border-radius: @border-radius;
+  box-sizing: border-box;
+}
+._radius_button {
+  background-color: @c-white;
+  color: @c-lightgrey;
+  border: 1px solid @c-lightgrey;
+  border-radius: @border-radius-30;
+  font-size: @text-size-28px;
+  height: 1.578945rem;
+  width: 4.210526rem;
+  box-sizing: border-box;
+}
+._radius_active {
+  border-color: @c-high;
+  color: @c-high;
+}
+._button.tapping, ._button.demo_tapping {
+  color: @c-yellowish;
+  border-color: @c-yellowish;
+}
+._button:disabled {
+  color: @c-lightgrey;
+  border-color: @c-lightgrey;
+}
+._text_button:disabled {
+  color: @c-light;
+}
+._text_button.tapping:disabled {
+  color: @c-light;
+}
+
+// <b-rectangular-button/>
+._rectangular_button {
+  background-color: @c-white;
+  color: @c-high;
+  border: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+._rectangular_button.tapping {
+  color: @c-tapping;
+}
+._rectangular_button:disabled {
+  color: @c-white;
+  background-color: @c-stonegrey;
+}
+._rectangular_button.tapping:disabled {
+  color: @c-white;
+  background-color: @c-stonegrey;
+}
+
+// <b-tab-button/>
+._tab_button {
+  background-color: @c-white;
+  color: @c-high;
+  border: 1px solid @c-high;
+  box-sizing: border-box;
+}
+
+// 标签 button 安卓下统一 1px 边框
+._tab_button_left {
+  border-right: none; 
+  border-radius: @border-radius 0 0 @border-radius;
+}
+._tab_button_middle {
+  border-right: none;
+}
+._tab_button_right{
+  border-radius: 0 @border-radius @border-radius 0;
+}
+.hairlines ._tab_button {
+  border: @border-2x-high;
+}
+@media only screen and (min-width: 412px) {
+  .hairlines ._tab_button {
+      border: @border-3x-high;
+  }
+}
+
+// filled = 'true'
+._button_filled {
+  color: @c-white;
+  border-color: @c-high;
+  background-color: @c-high;
+}
+._button_filled.tapping, ._button_filled.demo_tapping {
+  color: @c-white;
+  border-color: @c-tapping;
+  background-color: @c-tapping;
+}
+._button_filled:disabled, ._button_filled:disabled.tapping {
+  color: @c-white;
+  border-color: @c-stonegrey;
+  background-color: @c-stonegrey;
+}
+// <b-text-button/>
+._text_button {
+  background-color: @c-transparent;
+  color: @c-high;
+  border: 0;
+  box-sizing: border-box;
+}
+._text_button.tapping {
+  color: @c-yellowish;
+}
+
+
+// 输入控件
+input,textarea {
+  font-size: @text-size-30px;
+  color: @c-black;
+  border: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  outline: none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: @c-lightgrey;
+}
+._textarea {
+  position: relative;
+  height: 5rem;
+  width: 100%;
+  
+  textarea {
+      width: 100%;
+      height: 100%;
+      resize: none;
+      margin: 0;
+      padding: 0.684211rem 0.78947rem 1.25rem;
+      box-sizing: border-box;
+      background-color: @c-white;
+      background-image: @img-border-btm;
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+  }
+ span {
+      position: absolute;
+      bottom: 0.273684rem;
+      right: 0.78947rem;
+      color: @c-lightgrey;
+      font-size: 0.78947rem;
+      z-index: 2;
+ }
+}
+
+._field {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 100%;
+}
+._field i {
+  display: none;
+  &:extend(.lego);
+  &:extend(.i-round-cross);
+  font-size: @text-size-34px;
+  color: @c-lightgrey;
+}
+.entering i {
+  display: block;
+}
+
+._address_field {
+  outline: none;
+}
+
+._solid_checkbox{
+  display: inline-block;
+  width: @rem_32px;
+  height: @rem_32px;
+  line-height: @rem_24px;
+  border: 1px solid @c-lightgrey;
+  background-color: @c-transparent;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+._solid_checkbox._checkbox_active{
+  border-color: @c-high;
+  background-color: @c-high;
+}
+
+._solid_radio,
+._radio {
+  position: relative;
+  display: inline-block;
+  width: @rem_40px;
+  height: @rem_40px;
+  line-height: @rem_35px;
+  border: 1px solid @c-lightgrey;
+  border-radius: 50%;
+  background-color: @c-transparent;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+}
+._radio i,
+._checkbox i{
+  font-size: @rem_30px;
+  font-weight: bold;
+}
+._solid_radio_active:after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -@rem_14px;
+  margin-left: -@rem_14px;
+  width: @rem_28px;
+  height: @rem_28px;
+  border: none;
+  background-color: @c-high;
+  border-radius: 50%;
+}
+
+._radio_active {
+  border-color: @c-high;
+  background-color: @c-high;
+}
+
+// new radio
+@radio-prefix-cls: 'l-radio';
+
+.@{radio-prefix-cls}-wrapper {
+  font-size: 16px;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  margin-right: 8px;
+}
+
+// 基础样式
+.@{radio-prefix-cls} {
+  display: inline-block;
+  margin-right: 4px;
+  white-space: nowrap;
+  outline: none;
+  position: relative;
+  line-height: 1;
+  vertical-align: middle;
+
+  &-inner {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      position: relative;
+      top: 0;
+      left: 0;
+      background-color: @c-transparent;
+      border: 1px solid @c-lightgrey;
+      border-radius: 50%;
+      //transition: all 1s;
+
+      & i {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+      }
+      // &:after {
+      //     position: absolute;
+      //     width: 10px;
+      //     height: 10px;
+      //     left: 3px;
+      //     top: 3px;
+      //     border-radius: 50%;
+      //     display: table;
+      //     border-top: 0;
+      //     border-left: 0;
+      //     content: '';
+      //     background-color: @c-light;
+      //     opacity: 0;
+
+      // }
+  }
+  &-input {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      opacity: 0;
+  }
+}
+//选中
+.@{radio-prefix-cls}-checked {
+  .@{radio-prefix-cls}-inner {
+      border-color: @c-transparent;
+      // &:after {
+      //     opacity: 1;
+      //     background-color: @c-high;
+      // }
+      & i {
+          opacity: 1;
+      }
+  }
+}   
+
+
+
+._toggle {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 34px;
+  background-color: @c-offwhite;
+  border: 2px solid @c-stonegrey;
+  border-radius: 17px;
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.1s,border 0.1s;
+  transition: background-color 0.1s,border 0.1s;
+
+  &:before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 50px;
+      height: 30px;
+      border-radius: 15px;
+      background-color: @c-offwhite;
+      -webkit-transition: -webkit-transform 0.35s ease-in-out;
+      transition: transform 0.35s ease-in-out;
+  }
+  &:after{
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      border: 1px solid rgba(229, 229, 229, .5);
+      background-color: @c-white;
+      box-shadow: 0 1px 3px rgba(0,0,0,.4);
+      -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.4);
+      -webkit-transition: -webkit-transform 0.35s ease-in-out;
+      transition: transform 0.35s ease-in-out;
+  }
+  &._toggle_active {
+      background-color: @c-high;
+      border-color: @c-high;
+      &:before {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+      }
+      &:after{
+          -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+      }
+  }
+  
+}
+
+._select {
+  margin-right: -2px;
+  & ._native-select {
+      outline: none;
+      border: none;
+      background: transparent;
+      direction: rtl;
+      font-size: @rem_30px;
+      margin-right: -@rem_10px;
+      width: auto;
+      color: @c-black;
+  }
+}
+
+._select_text {
+  vertical-align: 1px;
+  color: @c-lightgrey;
+}
+

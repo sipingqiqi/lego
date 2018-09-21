@@ -1,0 +1,114 @@
+<list card='next-cell' :data='list9' :on-tap='onTap' ></list>
+<list card='next-cell' :data='list9' :on-tap='onTap' :show-right='false'></list>
+<!-- 银行卡 跳转下一页  -->
+<s-cell height="1" border="true" bgcolor="offwhite">
+    <s-column width=".789474" align="left">
+    </s-column>
+    <s-column width="13" align="left">
+        <b-text size="22" color="grey">银行卡 跳转下一页</b-text>
+    </s-column>
+</s-cell>
+<list card='next-card' :data='list1' :on-tap='onTap'></list>
+
+<s-cell height="1" border="true" bgcolor="offwhite">
+    <s-column width=".789474" align="left">
+    </s-column>
+    <s-column width="13" align="left">
+        <b-text size="22" color="grey">不支持的银行卡 提示更换 跳转下一页 </b-text>
+    </s-column>
+</s-cell>
+
+<list card='next-card' name='name' value='123' :data='list2' :on-tap='onTap' ></list>
+
+<s-cell height="1" border="true" bgcolor="offwhite">
+    <s-column width=".789474" align="left">
+    </s-column>
+    <s-column width="13" align="left">
+        <b-text size="22" color="grey">不支持的银行卡 不可点击 </b-text>
+    </s-column>
+</s-cell>
+
+<list card='next-card' name='name' value='123' :data='list3' :on-tap='onTap' ></list>
+
+<!-- 选择银行卡 指定默认选中的片卡  -->
+<s-cell height="1" border="true" bgcolor="offwhite">
+    <s-column width=".789474" align="left">
+    </s-column>
+    <s-column width="13" align="left">
+        <b-text size="22" color="grey">指定默认选中的片卡 且银行卡列表循环 </b-text>
+    </s-column>
+</s-cell>
+
+<list card='select-card' name='bankName' value='建设银行' :data='list' :on-tap='onTap'  ></list>
+
+<!-- 支持的银行卡   -->
+<s-cell height="1" border="true" bgcolor="offwhite">
+    <s-column width=".789474" align="left">
+    </s-column>
+    <s-column width="13" align="left">
+        <b-text size="22" color="grey">指定默认选中的片卡 且银行卡列表循环 </b-text>
+    </s-column>
+</s-cell>
+
+<list card='card' name='bankName' value='拉拉银行' :data='list' :on-tap='onTap'  ></list>
+
+<!-- 在途资产   -->
+<s-cell height="1" border="true" bgcolor="offwhite">
+    <s-column width=".789474" align="left">
+    </s-column>
+    <s-column width="13" align="left">
+        <b-text size="22" color="grey">在途资产 申购赎回订单列表 </b-text>
+    </s-column>
+</s-cell>
+
+<list card='order-card' :data='list4' :on-tap='onTap'  ></list>
+
+<!-- 账户明细   -->
+<s-cell height="1" border="true" bgcolor="offwhite">
+    <s-column width=".789474" align="left">
+    </s-column>
+    <s-column width="13" align="left">
+        <b-text size="22" color="grey">账户明细</b-text>
+    </s-column>
+</s-cell>
+
+<list card='order-card' :data='list5' :on-tap='onTap'  ></list>
+<!-- 预约赎回   -->
+<s-cell height="1" border="true" bgcolor="offwhite">
+    <s-column width=".789474" align="left">
+    </s-column>
+    <s-column width="13" align="left">
+        <b-text size="22" color="grey">预约赎回</b-text>
+    </s-column>
+</s-cell>
+
+<list card='order-card' color='orange' size='44' :data='list6' :on-tap='onTap'  ></list>
+
+<!-- total-count-key / total-page-key 二选一 -->
+<s-cell height="1" border="true" bgcolor="offwhite">
+    <s-column width=".789474" align="left">
+    </s-column>
+    <s-column width="13" align="left">
+        <b-text size="22" color="grey">单行信息</b-text>
+    </s-column>
+</s-cell>
+<list card='line-card' :data='list7' :on-tap='onTap'  ></list>
+
+<!--<lazy-list card="order-card" :url="url" :request="requestObj" :page-key="currentPage" page-size="100"
+           :list-key="list" :total-count-key="count" :total-page-key="totalPage"
+           :on-tapped="onTapped">
+</lazy-list>-->
+
+<s-cell height="1" border="true" bgcolor="offwhite">
+    <s-column width=".789474" align="left">
+    </s-column>
+    <s-column width="13" align="left">
+        <b-text size="22" color="grey">question</b-text>
+    </s-column>
+</s-cell>
+<list card='question' :data='list8' :on-tap='onTap'  ></list>
+
+<welfare-card left-label="账户余额" right-width="9" right-label="2300.20元" right-note="等值金额 158.2元"></welfare-card>
+<welfare-card :border-padding='true' height="90" left-label="账户余额" right-label="2300.20元" ></welfare-card>
+<welfare-card left-label="账户余额" right-label="2300.20元" right-note="等值金额 158.2元"></welfare-card>
+

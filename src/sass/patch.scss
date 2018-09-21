@@ -1,0 +1,21 @@
+.gum.rwd .lego button {
+    background-image: none;
+}
+
+.gum.rwd .lego input {
+    margin: 0;
+    height: auto;
+}
+
+$c-high             : #d7ac62;
+$border-2x-high     : .5px solid $c-high;
+$border-3x-high     : .4px solid $c-high;
+
+.hairlines .lego ._button {
+    border: $border-2x-high;
+}
+@media only screen and (min-width: 412px) {
+    .hairlines .lego ._button {
+        border: $border-3x-high;
+    }
+}

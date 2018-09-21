@@ -1,0 +1,87 @@
+// 以下为字符颜色值
+$c-white            : #fff;
+$c-black            : #333;
+$c-grey             : #666;
+$c-light            : #999;
+$c-lightgrey        : #c1c1c1;
+$c-stonegrey        : #dcdcdc;
+$c-smokegrey        : #e5e5e5;
+$c-offwhite         : #efefef;
+$c-cream            : #f6f6f7;
+
+$c-high             : #d7ac62;
+$c-tapping          : #b38f47;
+$c-yellowish        : #e0c89d;
+$c-lightyellow      : #fffce8;
+
+$c-grass            : #58af51;
+$c-skyblue          : #4475ac;    
+$c-powderblue       : #50b1ab; 
+$c-blackblue        : #2e2516; 
+$c-coral            : #e6654c; 
+$c-orange           : #ff7700; 
+
+$c-transparent      : transparent;
+
+// 渐变背景色
+$c-land-webkit      : -webkit-linear-gradient(-135deg, #5c4e27, #423620 );
+$c-land             : linear-gradient(-135deg, #5c4e27, #423620);
+
+// 白色0.9的透明
+$c-paper            : rgba(255,255,255,.9);
+
+// modal mask
+$zindex-mask: 99;
+$zindex-modal: 100;
+
+$border-2x-high         : .5px solid $c-high;
+$border-3x-high         : .4px solid $c-high;
+
+@function calRem($px) {
+    @return $px/38 + rem; 
+}
+
+$border-radius          : 3px;
+$border-radius-30       : calRem(30);
+
+
+// 以下为文字大小的对应关系，左侧为视觉标准单位，右侧为 rem 值
+$text-size-16px         : calRem(16);
+$text-size-18px         : calRem(18);
+$text-size-22px         : calRem(22);
+$text-size-24px         : calRem(24);
+$text-size-28px         : calRem(28);
+$text-size-30px         : calRem(30);
+$text-size-32px         : calRem(32);
+$text-size-34px         : calRem(34);
+$text-size-36px         : calRem(36);
+$text-size-38px         : calRem(38);
+$text-size-40px         : calRem(40);
+$text-size-44px         : calRem(44);
+$text-size-48px         : calRem(48);
+$text-size-50px         : calRem(50);
+$text-size-60px         : calRem(60);
+$text-size-60px         : calRem(60);
+$text-size-112px        : calRem(112);
+$text-size-120px        : calRem(120);
+$text-size-224px        : calRem(224);
+$text-size-300px        : calRem(300);
+
+
+
+//公用样式 %placeholder
+// 弹性布局 垂直居中 父级 设定
+%setflex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+//box-sizing
+%boxsizing {
+    box-sizing: border-box;
+}

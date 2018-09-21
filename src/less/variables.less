@@ -1,0 +1,83 @@
+// 以下为字符颜色值
+@c-white            : #fff;
+@c-black            : #333;
+@c-grey             : #666;
+@c-light            : #999;
+@c-lightgrey        : #c1c1c1;
+@c-stonegrey        : #dcdcdc;
+@c-smokegrey        : #e5e5e5;
+@c-offwhite         : #efefef;
+@c-cream            : #f6f6f7;
+
+@c-high             : #d7ac62;
+@c-tapping          : #b38f47;
+@c-yellowish        : #e0c89d;
+@c-lightyellow      : #fffce8;
+
+@c-grass            : #58af51;
+@c-skyblue          : #4475ac;    
+@c-powderblue       : #50b1ab; 
+@c-blackblue        : #2e2516; 
+@c-coral            : #e6654c; 
+@c-orange           : #ff7700; 
+
+@c-transparent      : transparent;
+
+// 渐变背景色
+@c-land-webkit      : -webkit-linear-gradient(-135deg, #5c4e27, #423620 );
+@c-land             : linear-gradient(-135deg, #5c4e27, #423620);
+
+// 白色0.9的透明
+@c-paper            : rgba(255,255,255,.9);
+
+// modal mask
+@zindex-mask: 99;
+@zindex-modal: 100;
+
+@border-2x-high         : .5px solid @c-high;
+@border-3x-high         : .4px solid @c-high;
+
+@border-radius          : 3px;
+@border-radius-30       : 0.7894737rem;
+
+
+// 以下为文字大小的对应关系，左侧为视觉标准单位，右侧为 rem 值
+@text-size-16px         : 0.4210526rem;
+@text-size-18px         : 0.4736842rem;
+@text-size-22px         : 0.5789474rem;
+@text-size-24px         : 0.6315789rem;
+@text-size-28px         : 0.7368421rem;
+@text-size-30px         : 0.7894737rem;
+@text-size-32px         : 0.8421053rem;
+@text-size-34px         : 0.8947368rem;
+@text-size-36px         : 0.9473684rem;
+@text-size-38px         : 1rem;
+@text-size-40px         : 1.0526316rem;
+@text-size-44px         : 1.1578947rem;
+@text-size-48px         : 1.2631579rem;
+@text-size-50px         : 1.3157895rem;
+@text-size-60px         : 1.5789474rem;
+@text-size-112px        : 2.9473684rem;
+@text-size-120px        : 3.1578947rem;
+@text-size-224px        : 5.8947368rem;
+@text-size-300px        : 7.8947368rem;
+
+
+
+// 公用样式 %placeholder
+// 弹性布局 垂直居中 父级 设定
+.__precent__setflex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+//box-sizing
+.__percent__boxsizing {
+    box-sizing: border-box;
+}
+

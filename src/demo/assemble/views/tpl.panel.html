@@ -1,0 +1,66 @@
+<p-main bgcolor='offwhite'>
+    <stub></stub>
+    <panel edit='false' bgcolor='white' border='false' label-width='6'>
+        <fixed-row height='5' color='black'>暂无消息...</fixed-row>
+        <a-title id='save1' label='联系方式' subtitle='(单位：元)' comment='2000.00'></a-title>
+        <a-title id='save2' label='联系方式'>保存</a-title>
+        <tel-field-row id='xxx' label='电话号码' placeholder='请输入' v-model='tel'></tel-field-row>
+        <tel-field-row label='电话号码' align='right' placeholder='请输入' v-model='tel'></tel-field-row>
+        <text-row label='姓名'>李乐乐</text-row>
+        <text-row label='证件类型'>21234567989456462</text-row>
+        <text-row label='出生日期'>1995-02-05</text-row>
+        <text-row label='性别'>男</text-row>
+        <text-field-row label='性别' placeholder='请输入'>男</text-field-row>
+        <text-field-row label='性别' placeholder='请输入' align='right'>男</text-field-row>
+        <text-row>
+            <b-text color='grey'>Q 请问在哪里查看</b-text><br/>
+            <b-text color='light'>A 回答回答回答</b-text>
+        </text-row>
+    </panel>
+    <stub></stub>
+    <panel edit='true' bgcolor='white' border='false' label-width='8'>
+        <fixed-row height='5' color='black'>暂无消息...</fixed-row>
+        <a-title id='save1' label='联系方式' subtitle='(单位：元)' comment='2000.00'></a-title>
+        <a-title id='save2' label='联系方式'>保存</a-title>
+        <tel-field-row label='电话号码' placeholder='请输入' v-model='tel'></tel-field-row>
+        <tel-field-row label='电话号码' placeholder='请输入' v-model='tel'></tel-field-row>
+        <text-row label='姓名'>李乐乐</text-row>
+        <text-row label='姓名' align='right'>乐乐</text-row>
+        <text-row label='证件类型'>21234567989456462</text-row>
+        <text-row label='出生日期'>1995-02-05</text-row>
+        <text-row label='性别'>男</text-row>
+        <text-field-row label='性别' placeholder='请输入'>男</text-field-row>
+        <text-field-row label='性别' placeholder='请输入' >男</text-field-row>
+        <select-row id='label' label='左侧单行' :native='true' placeholder='每个发工资日' :data-select='["1日","2日","3日","4日"]'></select-row>
+        <select-row label='出生日期' color='lightgrey'>请选择</select-row>
+    </panel>
+    <fixed-row height='5' border='false'>暂无消息...</fixed-row>
+    <amount-row :label='1000' default-value='1000' desc='赎回金额' placeholder="本次最多赎回1000.00元" :callfn="function(e){console.log(e)}"></amount-row>
+    <!--<amount-row desc='充值金额' placeholder="本次最多赎回1000.00元"></amount-row>-->
+    <!--<amount-row label='1000' placeholder="本次最多赎回1000.00元"></amount-row>-->
+    <stub border='false'></stub>
+    <check-line-group :call-fn='function(ev){console.log(ev.id)}'>
+        <check-line id='pay1' label='银行卡支付' comment='单日限额 3000 元' value='拉拉银行 尾号3500' link='true' ></check-line>
+        <check-line id='pay2' label='钱包支付' value='3,000.00 元' ></check-line>
+        <check-line id='pay3' label='银行卡支付' value='中国工商银行 尾号8188' checked='true' link='true' ></check-line>
+    </check-line-group>
+    <tab-button left-label='2.3456' right-label='3.2345' :is-date="true" title-size='26'> 
+        <a-button id='profit'>7日年化收益(%)</a-button>
+        <a-button id='sdate'>万分收益(元)</a-button>
+    </tab-button>
+    <line-chart :list='data.hisProfitRates'></line-chart>
+    <tab-button :radius="true">
+        <a-button id='all'>7日</a-button>
+        <a-button id='pay'>1个月</a-button>
+        <a-button id='income'>2个月</a-button>
+    </tab-button>
+    <fixed-row height='5' border='false' submit='true'></fixed-row>
+    <tab-button id="tab">
+        <a-button id='profit'>7日年化收益(%)</a-button>
+        <a-button id='sdate'>万分收益(元)</a-button>
+    </tab-button>
+
+    <textarea-row id='reason' placeholder='如不能提供居民国（地区）纳税人识别号，请输入具体原因' :height='190' max='250'></textarea-row>
+
+     <toast></toast>   
+</p-main>

@@ -1,0 +1,39 @@
+<p-main bgcolor='offwhite'>
+    <stub></stub>
+    <dock filled='true' bgcolor='white' >
+        <a-button id='button1'>确定</a-button>
+    </dock>
+    <stub></stub>
+    <dock filled='false' bgcolor='white' >
+        <a-button id='button2'>确定</a-button>
+    </dock>
+    <stub></stub>
+    <dock bgcolor='white'>
+        <a-button id='cancel' :disabled='true'>取消</a-button>
+        <a-button id='ok' :disabled='true'>确定</a-button>
+    </dock>
+    <stub></stub>
+    <dock filled='true' bgcolor='white'>
+        <a-button id='cancel' :disabled='true'>取消</a-button>
+        <a-button id='ok' >确定</a-button>
+    </dock>
+    <stub></stub>
+    <dock filled='true' bgcolor='white'>
+        <a-button id='plan' :disabled='true'>每月自动定投</a-button>
+        <a-button id='sell'>赎回</a-button>
+        <a-button id='buy' :disabled='true'>申购</a-button>
+    </dock>
+</p-main>
+
+<p-footer>
+    <dock bgcolor='white' border-top='true'>
+        <a-button id='f-cancel'>取消</a-button>
+        <a-button id='f-ok'>确定</a-button>
+    </dock>
+</p-footer>
+
+<p-modalup>
+    <welfare-card left-label="账户余额" right-width="9" right-label="2300.20元" right-note="等值金额 158.2元"></welfare-card>
+    <welfare-card :border-padding='true' height="90" left-label="账户余额" right-label="2300.20元" ></welfare-card>
+    <welfare-card left-label="账户余额" right-label="2300.20元" right-note="等值金额 158.2元"></welfare-card>
+</p-modalup>

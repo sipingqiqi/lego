@@ -1,0 +1,289 @@
+@import 'variables.less';
+@import 'svg.less';
+@import 'iconfont.less';
+
+@import 'basic.less';
+@import 'structure.less';
+@import 'assemble.less';
+@import 'page.less';
+
+html, body, #wrapper {
+    height: 100%;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+}
+
+html {
+    font-size: 16px;
+}
+@media only screen and (min-width: 360px) {
+    html { font-size: 18px; }
+}
+@media only screen and (min-width: 375px) {
+    html { font-size: 19px; }
+}
+@media only screen and (min-width: 412px) {
+    html { font-size: 21px; }
+}
+
+body {
+    font-family: PingFangSC-Regular, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+button, input, span {
+    font-family: PingFangSC-Regular, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    outline: none;
+}
+
+
+._font-light {
+    font-family: PingFangSC-Light, sans-serif;
+}
+._font-medium {
+    font-family: PingFangSC-Medium, sans-serif;
+}
+ 
+// 所有 color 属性列表
+._text_color_white {
+    color: @c-white;
+}
+._text_color_offwhite {
+    color: @c-offwhite;
+}
+._text_color_black {
+    color: @c-black;
+}
+._text_color_grey {
+    color: @c-grey;
+}
+._text_color_stonegrey {
+    color: @c-lightgrey;
+}
+._text_color_lightgrey {
+    color: @c-lightgrey;
+}
+._text_color_light {
+    color: @c-light;
+}
+._text_color_high {
+    color: @c-high;
+}
+._text_color_tapped {
+    color: @c-yellowish;
+}
+._text_color_green {
+    color: @c-grass;
+}
+._text_color_blue {
+    color: @c-skyblue;
+}
+._text_color_powderblue {
+    color: @c-powderblue;
+}
+._text_color_coral {
+    color: @c-coral;
+}
+._text_color_blackblue {
+    color: @c-blackblue;
+}
+._text_color_coral {
+    color: @c-coral;
+}
+._text_color_orange {
+    color: @c-orange;
+}
+
+// 所有字体大小
+._text_size_16px {
+    font-size: @text-size-16px;
+}
+._text_size_18px {
+    font-size: @text-size-18px;
+}
+._text_size_22px {
+    font-size: @text-size-22px;
+}
+._text_size_24px {
+    font-size: @text-size-24px;
+}
+._text_size_28px {
+    font-size: @text-size-28px;
+}
+._text_size_30px {
+    font-size: @text-size-30px;
+}
+._text_size_32px {
+    font-size: @text-size-32px;
+}
+._text_size_34px {
+    font-size: @text-size-34px;
+}
+._text_size_36px {
+    font-size: @text-size-36px;
+}
+._text_size_38px {
+    font-size: @text-size-38px;
+}
+._text_size_40px {
+    font-size: @text-size-40px;
+}
+._text_size_44px {
+    font-size: @text-size-44px;
+}
+._text_size_48px {
+    font-size: @text-size-48px;
+}
+._text_size_50px {
+    font-size: @text-size-50px;
+}
+._text_size_60px {
+    font-size: @text-size-60px;
+}
+._text_size_112px {
+    font-size: @text-size-112px;
+}
+._text_size_120px {
+    font-size: @text-size-120px;
+}
+._text_size_224px {
+    font-size: @text-size-224px;
+}
+._text_size_300px {
+    font-size: @text-size-300px;
+}
+
+._text-right {
+    text-align: right;
+}
+
+// 所有 background-color 属性列表
+._bgcolor_white {
+    background-color: @c-white;
+}
+._bgcolor_high {
+    background-color: @c-high;
+}
+._bgcolor_transparent {
+    background-color: @c-transparent;
+}
+._bgcolor_lightgrey {
+    background-color: @c-lightgrey;
+}
+._bgcolor_stonegrey {
+    background-color: @c-stonegrey;
+}
+._bgcolor_cream  {
+    background-color: @c-cream;
+}
+._bgcolor_smokegray {
+    background-color: @c-smokegrey;
+}
+._bgcolor_offwhite {
+    background-color: @c-offwhite;
+}
+//背景渐变色
+._bgcolor_deepbrown {
+    background: @c-land-webkit;
+    background: @c-land;
+}
+._bgcolor_paper {
+    background: @c-paper;
+}
+
+
+
+//公用样式 %placeholder
+// 弹性布局 垂直居中
+._setflex {
+  &:extend(.__percent__setflex);
+}
+
+//1px border bottom
+.__percent__borderbottom1px {
+    background-image: @img-border-btm;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+}
+
+._borderbottom1px {
+  &:extend(.__percent__borderbottom1px);
+}
+
+// test LEGO UI 页面层级
+.__at__transform(@z: 0px) {
+    -webkit-transform: translateX(15px) rotateX(30deg) rotate(10deg) skew(-20deg) translateZ(@z);
+    transform: translateX(15px) rotateX(30deg) rotate(10deg) skew(-20deg) translateZ(@z);
+}
+
+._layers {
+    position: relative;
+    height: 300px;
+    margin: 200px auto;
+}
+._layers span {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: @c-white;
+}
+._layers_common {
+    position: absolute;
+    left: 50%;
+    width: 150px;
+    height: 200px;
+    margin-left: -75px;
+    box-sizing: border-box;
+    font-size: @text-size-30px;
+    -webkit-transition: .5s;
+    transition: .5s;
+    border: 1px solid transparent;
+
+}
+._layers_popout {
+    height: 100px;
+    width: 120px;
+    left: 40%;
+    top: 30%;
+    z-index: 10;
+    background-color: rgba(245, 123, 233, 1);
+    border-color: rgba(245, 123, 233, 0.4);
+}
+._layers_p_transform {
+    .__at__transform(180px);
+}
+._layers_mask {
+    top: 6%;
+    left: 45%;
+    z-index: 8;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+._layers_m_transform {
+    .__at__transform(120px);
+}
+._layers_absolute {
+    height: 60px;
+    top: 45%;
+    left: 37%;
+    z-index: 5;
+    border-color: rgba(40, 187, 102, 0.9);
+    background-color: rgba(40, 187, 102, 0.9);
+}
+._layers_a_transform {
+    .__at__transform(50px);
+}
+._layers_content {
+    border-color: #fbe3e3;
+    background-color: #fbe3e3;
+
+}
+._layers_c_transform {
+    .__at__transform(-20px);
+}
+

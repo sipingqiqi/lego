@@ -1,0 +1,426 @@
+<p-main>
+    <s-single-cell height='4'>
+        <s-flex-column width="13" align="center">
+            <b-text size="24" color="grey">Field组件中，主要是各种表单的展示</b-text>
+        </s-flex-column>
+    </s-single-cell>
+
+    <s-cell height="3" bgcolor="offwhite">
+        <s-column width=".789474" align="left">
+        </s-column>
+        <s-column width="2" align="left">
+            <b-radio :value=true></b-radio>
+        </s-column>
+        <s-column width="2" align="left">
+            <b-solid-radio :checked=true></b-solid-radio>
+        </s-column>
+        <s-column width="2" align="left">
+            <b-checkbox id="ck" :checked=true></b-checkbox>
+        </s-column>
+        <s-column width="2" align="left">
+            <b-solid-checkbox :checked=true></b-solid-checkbox>
+        </s-column>
+        <s-column width="4" align="left">
+            <b-toggle :checked=true></b-toggle>
+        </s-column>
+        <s-column width="6" align="left">
+            <b-select :checked=true size="24" color="grey" name="angle-right-bold">请选择产品</b-select>
+        </s-column>
+    </s-cell>
+
+    <s-cell height="3" bgcolor="offwhite">
+        <s-column width=".789474" align="left">
+        </s-column>
+        <s-column width="5" align="left">
+            <b-radio :value=true>选中</b-radio>
+        </s-column>
+        <s-column width="5" align="left">
+            <b-radio >未选中</b-radio>
+        </s-column>
+        <s-column width="5" align="left">
+            <b-radio >全不选</b-radio>
+        </s-column>
+    </s-cell>
+
+    <s-cell  border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">手机号码</b-text>
+        </s-column>
+        <s-column width="13.157895" align="right">
+            <b-tel-field size='30' label='手机号码' placeholder='请输入银行预留电话' value='1316251733' name='n1' id='id1' required='true' clearall='true'></b-tel-field>
+        </s-column>
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+    <s-cell  border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">动态密码</b-text>
+        </s-column>
+        <s-column width="6.789474" align="right">
+            <b-number-field size='30' clearall="true" label="动态密码" required="true"></b-number-field>
+        </s-column>
+        <s-column width="6.368421" align="right">
+            <b-button width="5.26316" height="1.578947" size="24" filled='true' :callback='sendcode' validate='true' second=30 count='获取验证码' placeholder='请输入验证码' id='sendcode'></b-button>
+        </s-column>
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+    <s-cell border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">电子邮箱</b-text>
+        </s-column>
+        <s-column width="13.157895" align="right">
+            <b-email-field size='30' clearall='true' label='电子邮箱' placeholder="请输入电子邮箱" required='true'></b-email-field>
+        </s-column>
+        <!--<s-column width="3" align="right">
+            <b-icon name="round-cross" size="34" color="stonegrey" ></b-icon>
+        </s-column>-->
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+    <s-cell height="2.473684" border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">身份证号</b-text>
+        </s-column>
+        <s-column width="13.157895" align="right">
+            <b-idcard-field size='30' label='身份证号码' clearall="true" placeholder="请输入身份证号" required="true"></b-idcard-field>
+        </s-column>
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+    <s-cell  border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">地址信息</b-text>
+        </s-column>
+        <s-column width="13.157895" align="right">
+            <b-address-field size='30' label='地址信息' :clearall=true placeholder="请输入地址信息" value='请输入地址信息请输入地址信息请输入地址信息请输入地址信息请输入地址信息请输入地址信息请输入地址信息' :required=true></b-address-field>
+        </s-column>
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+    <s-cell height="2.473684" border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">姓名</b-text>
+        </s-column>
+        <s-column width="13.157895" align="right">
+            <b-text-field size='30' clearall="true" placeholder="请输入姓名" label="姓名" required="true"></b-text-field>
+        </s-column>
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+    <s-cell height="2.473684" border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">金额</b-text>
+        </s-column>
+        <s-column width="13.157895" align="right">
+            <b-number-field size='30' close="true" placeholder="请输入金额" ></b-number-field>
+        </s-column>
+        <!--<s-column width="3" align="right">
+            <b-icon name="round-cross" size="34" color="stonegrey" ></b-icon>
+        </s-column>-->
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+    <s-cell height=".526316" bgcolor="offwhite">
+    </s-cell>
+    <s-cell height="3.157895" border="false" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="12.8947" align="center">
+            <b-button id='btn' size="34" color="white"  height="2.105263" filled='true' validate='true' :phonevali=true :emailvali='true' idcardvali='true' numbervali='true'>提交</b-button>
+        </s-column>
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+    <s-cell height="1" bgcolor="offwhite">
+    </s-cell>
+    <!--左侧对齐样式-->
+    <s-cell height="2" border="true" bgcolor="offwhite">
+        <s-column width=".789474" align="left">
+        </s-column>
+        <s-column width="13" align="left">
+            <b-text size="28" color="grey">左侧对齐样式</b-text>
+        </s-column>
+    </s-cell>
+    <s-cell height="2.473684" border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">手机号</b-text>
+        </s-column>
+        <s-column width="13.157895" align="right">
+            <b-tel-field size="30" color="grey" clearall="true" placeholder="请输入手机号" value="12345678987" ></b-tel-field>
+        </s-column>
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+    <s-cell height="2.473684" border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">验证码</b-text>
+        </s-column>
+        <s-column width="6.789474" align="right">
+            <b-number-field size="30" color="grey" placeholder="手机验证码" value="12345678987"  ></b-number-field>
+        </s-column>
+        <s-column width="6.368421" align="right">
+            <b-text-button disabled size="30" align="right" align="right" >60秒</b-ext-button>
+        </s-column>
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+    <s-cell height="2.473684" border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">验证码</b-text>
+        </s-column>
+        <s-column width="6.789474" align="right">
+            <b-number-field size="30" color="grey" placeholder="手机验证码" ></b-number-field>
+        </s-column>
+        <s-column width="6.368421" align="right">
+            <b-text-button size="30" align="right" color="high" align="right" >获取</b-ext-button>
+        </s-column>
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+
+    <s-single-cell height=".368421" border="true" bgcolor="offwhite">
+    </s-single-cell>
+    <s-cell height="2.473684" border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">图片验证码</b-text>
+        </s-column>
+        <s-column width="6.789474" align="right">
+            <b-text-field size="28" color="grey" placeholder="图片验证码" ></b-text-field>
+        </s-column>
+        <s-column width="6.368421" align="right">
+            <b-image width="5.315789" height="2.210526" src="https://ohc0dpsgs.qnssl.com/lego/images/code.png" height="2.105263"></b-mage>
+        </s-column>
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+
+    <s-single-cell height=".368421" border="true" bgcolor="offwhite">
+    </s-single-cell>
+    <s-cell height="2.473684" border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">姓名</b-text>
+        </s-column>
+        <s-column width="13.157895" align="left">
+            <b-text-field size="30" color="black" clearall="true" placeholder="请输入姓名" ></b-text-field>
+        </s-column>
+        <!--<s-column width="3" align="right">
+            <b-icon name="round-cross" size="34" color="stonegrey" ></b-icon>
+        </s-column>-->
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+    <s-single-cell height=".368421" border="true" bgcolor="offwhite">
+    </s-single-cell>
+    <s-cell height="2.473684" border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">证件类型</b-text>
+        </s-column>
+        <s-column width="6.789474" align="right">
+            <b-text-field size="30" color="black" value="身份证"></b-text-field>
+        </s-column>
+        <s-column width="6.368421" align="right">
+            <b-icon name="angle-right-bold" size="30" color="grey" ></b-icon>
+        </s-column>
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+    <s-cell height="2.473684" border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">证件号码</b-text>
+        </s-column>
+        <s-column width="13.157895" align="right">
+            <b-idcard-field size="30" color="black" close="true" placeholder="请输入证件号" ></b-idcard-field>
+        </s-column>
+        <!--<s-column width="3" align="right">
+            <b-icon name="round-cross" size="34" color="stonegrey" ></b-icon>
+        </s-column>-->
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+
+    <!--两种情况的验证码-->
+    <s-cell height="2" border="true" bgcolor="offwhite">
+        <s-column width=".789474" align="left">
+        </s-column>
+        <s-column width="13" align="left">
+            <b-text size="28" color="grey">两种情况的验证码</b-text>
+        </s-column>
+    </s-cell>
+    <s-cell height="2.473684" border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">动态密码</b-text>
+        </s-column>
+        <s-column width="6.789474" align="right">
+            <b-text-field size="30" align="right" placeholder="验证码"></b-text-field>
+        </s-column>
+        <s-column width="6.368421" align="right">
+            <b-button size="24" filled="true" width="5.26316" height="1.578947">获取验证码</b-button>
+        </s-column>
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+    <s-cell height="2.473684" border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">动态密码</b-text>
+        </s-column>
+        <s-column width="6.789474" align="right">
+            <b-tel-field size="30" align="right" color="grey" placeholder="" value="888888"></b-tel-field>
+        </s-column>
+        <s-column width="6.368421" align="right">
+            <b-button size="24" filled="true" width="5.26316" height="1.578947">(120s)重新获取</b-button>
+        </s-column>
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+
+    <!--提示和勾选协议相关-->
+    <s-cell height="2" border="true" bgcolor="offwhite">
+        <s-column width=".789474" align="left">
+        </s-column>
+        <s-column width="13" align="left">
+            <b-text size="28" color="grey">提示和勾选协议相关</b-text>
+        </s-column>
+    </s-cell>
+    <s-cell height="2.473684" border="true" >
+        <s-flex-column>
+        </s-flex-column>
+        <s-column width="5" align="left">
+            <b-text size="30" color="grey">验证码</b-text>
+        </s-column>
+        <s-column width="6.789474" align="right">
+            <b-tel-field size="30" color="grey" placeholder="手机验证码" ></b-tel-field>
+        </s-column>
+        <s-column width="6.368421" align="right">
+            <b-text-button size="30" align="right" color="high" >110s</b-ext-button>
+        </s-column>
+        <s-flex-column>
+        </s-flex-column>
+    </s-cell>
+    <s-cell height="2.684211" bgcolor="offwhite">
+        <s-column width=".789474" align="left">
+        </s-column>
+        <s-column width="18.157895" align="left">
+            <b-text size="24" color="light">已发送至银行预留手机号码512***8888，请在120秒内填写</b-text>
+        </s-column>
+    </s-cell>
+    <s-cell height="2.947368" bgcolor="offwhite">
+        <s-column width=".789474" align="left">
+        </s-column>
+        <s-column width=".894738" align="left">
+            <b-checkbox :checked="false"></b-checkbox>
+        </s-column>
+        <s-column width=".426316" align="left">
+        </s-column>
+        <s-column width="16.3" align="left">
+            <b-text size="24" color="light">我已阅读并同意 </b-text>
+            <b-text size="24" color="high">《拉拉直通银行账户服务协议》</b-text>
+        </s-column>
+    </s-cell>
+    <s-cell height=".842105" bgcolor="offwhite">
+        <s-column width=".789474" align="left">
+        </s-column>
+        <s-column width=".894738" align="left">
+            <b-checkbox :checked="false"></b-checkbox>
+        </s-column>
+        <s-column width=".426316" align="left">
+        </s-column>
+        <s-column width="13" align="left">
+            <b-text size="24" color="light">将该账户作为您的默认理赔账户 </b-text>
+        </s-column>
+    </s-cell>
+     <s-cell height="1.052632" bgcolor="offwhite"></s-cell>
+     <s-cell height="2.315789" bgcolor="offwhite">
+         <s-flex-column>
+        </s-flex-column>
+        <s-column width="18.157895" align="center">
+            <b-button size="34"  color="white" height="2.315789" filled="true">下一步</b-button>
+        </s-column>
+        <s-flex-column>
+        </s-flex-column>
+     </s-cell>
+
+     <s-cell height="2" border="true" bgcolor="offwhite">
+        <s-column width=".789474" align="left">
+        </s-column>
+        <s-column width="13" align="left">
+            <b-text size="28" color="grey">一个页面中的操作进度展示</b-text>
+        </s-column>
+    </s-cell>
+    <s-cell height="1.736842" border="true" >
+        <s-column width=".789474" height=".789474" align="left">
+        </s-column>
+        <s-column width="5.263158" align="left">
+            <b-text size="28" color="grey">您已完成 1/5</b-text>
+        </s-column>
+        <s-column width=".789474" align="left">
+            <b-solid-checkbox width=".526316" height=".526316"></b-solid-checkbox>
+        </s-column>
+        <s-column width=".789474" align="left">
+            <b-solid-checkbox width=".526316" height=".526316"></b-solid-checkbox>
+        </s-column>
+        <s-column width=".789474" align="left">
+            <b-solid-checkbox width=".526316" height=".526316"></b-solid-checkbox>
+        </s-column>
+        <s-column width=".789474" align="left">
+            <b-solid-checkbox width=".526316" height=".526316"></b-solid-checkbox>
+        </s-column>
+        <s-column width=".789474" align="left">
+            <b-solid-checkbox width=".526316" height=".526316"></b-solid-checkbox>
+        </s-column>
+    </s-cell>
+
+     <s-cell height="4" bgcolor="offwhite">
+    </s-cell>
+</p-main>
+<p-footer>
+    <s-cell height="3.157895" bgcolor="alpha">
+         <s-column width="1.578947"></s-column>
+         <s-column width="1.578947">
+             <b-radio></b-radio>
+         </s-column>
+         <s-column width=".526316"></s-column>
+         <s-column width="2.231579">
+             <b-text size="34" color="black">全选</b-text>
+         </s-column>
+         <s-flex-column align="right">
+            <b-highlight size="24" >合计：</b-highlight>
+            <b-highlight size="34" >￥7,008.50</b-highlight>
+        </s-flex-column>
+        <s-column width="6.842105" align="right">
+            <b-rectangular-button size="34"  color="white" width="6.315789" height="3.157895" filled="true">直角button</b-rectangular-button>
+        </s-column>
+     </s-cell>
+</p-footer>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+        <link rel="stylesheet" href="./docs.css"/>
+        <script type="text/javascript" src="./jquery.min.js"></script>
+        <title>LEGO Document</title>   
+    </head>
+    <body>
+        <div class="book">
+            <div class="aside" id="aside" ></div>
+            <div class="book-body">
+                <div class="right_head">
+                    <div class="btn_r" id="btn"></div>
+                </div>
+                <section class="normal markdown-section" id="introduce"></section>
+            </div>
+        </div>
+    </body>
+    <script>
+
+        function text2html (text) {
+            text = text || '';
+            text = text.replace(/</g, "&lt;");
+            text = text.replace(/>/g, "&gt;");
+            return text;
+        }
+
+        var t = false;
+        $('#btn').click(function(){
+            
+            if ($(window).width() <= 414) {
+                $('.aside h1:odd').toggleClass('fakes');
+                $('.aside h1:even').toggleClass('moves');
+                t = !t;
+                $(".aside").stop(true,false).animate({left: (t ? 0 : -350)});
+            } else {
+                $('.aside').fadeToggle('normal');
+            }
+        });
+
+        // 获取 JSON 文件
+        $.getJSON('./docs.json',function (data){
+            var html = '<div class="btn_l" style="font-size: 16px;background: url(\'https://ohc0dpsgs.qnssl.com/lego/images/lego.png\') 0 center no-repeat;background-size: 22px 22px;color: #666;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LEGO </div>';
+            for (var i = 0; i < data.content.length; i ++ ){
+                html += "<h1>" + text2html(data.content[i].name) + "</h1><ul class='one' style='display: none;'>";
+                var l = data.content[i].children.length
+                for (var j = 0; j < l; j ++ ){
+                    html += "<li data-link=" + data.content[i].children[j].link + ">" + text2html(data.content[i].children[j].name) + "</li>";
+                }
+                html += "</ul>";
+            }
+            $('#aside').html(html);
+
+            // 动画
+            $('.aside h1').click(function(){
+                $(this).next().stop(true,false).slideToggle(200);
+            });
+
+            // 页面初始化
+            $.ajax({
+                url: './doc/welcome.md.html',
+                data: {},
+                type: 'GET',
+                dataType: 'html',
+                success: function (resp, status){
+                    $("#introduce").html(resp);
+                }
+            });
+
+            // 点击切换页面
+            $(".one").click(function (e){
+                var target = e.target || e.srcElement;
+
+                // 置顶动画
+                $('.book-body').animate({scrollTop:0}, 100);
+ 
+                if (target.nodeName.toLowerCase() == 'li'){
+
+                    $.ajax({
+                        url: target.getAttribute('data-link'),
+                        data: {},
+                        type: 'GET',
+                        dataType: 'html',
+                        success: function (resp, status){
+                            // 右边内容页面渲染
+                            $("#introduce").html(resp);
+                        }
+                    });        
+                }
+                
+            });
+
+            // 颜色切换
+            $('#aside li').click(function (){
+                
+                $('#aside li').removeClass('active');
+                $(this).addClass('active');
+
+                $("#introduce:visible").fadeOut(0);
+                setTimeout(function(){
+                    $("#introduce").fadeIn(800);
+                },0);
+
+                $('.aside h1:odd').removeClass('fakes');
+                $('.aside h1:even').removeClass('moves');
+
+                if ($(window).width() <= 414) {
+                    t = !t;
+                    $(".aside").animate({left:-350});
+                }
+            });
+
+        });
+
+    </script>
+</html>
